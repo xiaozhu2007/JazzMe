@@ -30,7 +30,7 @@ var btn = document.getElementById('btn');
 function report(s) { return function() { log.innerHTML = s; }; }
 
 JZZ.synth.Tiny.register('Web Audio');
-var out = JZZ().connect(JZZ.input.Kbd({at:'piano'}).or(report('Cannot start MIDI engine!')).openMidiOut();
+var out = JZZ().or(report('Cannot start MIDI engine!')).openMidiOut();
 var player;
 var playing = false;
 
