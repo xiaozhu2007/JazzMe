@@ -119,7 +119,8 @@ function fromURL() {
     };
     try { xhttp.responseType = 'arraybuffer'; } catch (e) {}
     xhttp.overrideMimeType('text/plain; charset=x-user-defined');
-    xhttp.open('GET', url, true);
+    var new_url = 'https://proxy.pig2333.workers.dev/' + btoa(url);
+    xhttp.open('GET', new_url, true);
     xhttp.send();
   }
   catch (e) {
