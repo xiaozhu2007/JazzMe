@@ -22,7 +22,6 @@
 <h2>from Base64 string: <button onclick='fromBase64();'>Read...</button></h2>
 <p id=log>no file selected</p>
 <p><button id=btn onclick='playStop()' disabled>Play</button></p>
-<div id=piano></div>
 
 <script>
 var log = document.getElementById('log');
@@ -30,7 +29,7 @@ var btn = document.getElementById('btn');
 function report(s) { return function() { log.innerHTML = s; }; }
 
 JZZ.synth.Tiny.register('Web Audio');
-var out = JZZ().or(report('Cannot start MIDI engine!')).openMidiOut();
+var out = JZZ().openMidiOut();
 var player;
 var playing = false;
 
